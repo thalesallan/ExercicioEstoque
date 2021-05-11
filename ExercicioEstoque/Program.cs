@@ -18,6 +18,19 @@ namespace ExercicioEstoque
             p.Quantidade = int.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
 
             Console.WriteLine("Dados do produto: " + p);
+            Console.WriteLine("--------------------------------");
+            Console.WriteLine();
+            Console.WriteLine("Digite a quantidade de produtos a serem Adicionados: ");
+            int qtd = int.Parse(Console.ReadLine());
+            p.AdicionarProdutos(qtd);
+            Console.WriteLine("--------------------------------");
+            Console.WriteLine("Dados Atualizados: " + p);
+            Console.WriteLine("--------------------------------");
+            Console.WriteLine("Digite a quantidade de produtos a serem Removidos:");
+            qtd = int.Parse(Console.ReadLine());
+            p.RemoverProdutos(qtd);
+            Console.WriteLine("--------------------------------");
+            Console.WriteLine("Dados Atualizados " + p);
         }
     }
 }
